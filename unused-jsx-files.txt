@@ -1,0 +1,11 @@
+# Unused JSX Files Analysis
+# Generated on: 2025-08-06T09:49:14.123Z
+# Total JSX files analyzed: 78
+# Unused JSX files found: 6
+
+src/components/dashboardComponents/SupplierCredits.jsx
+src/components/layouts/Loader.jsx
+src/components/layouts/Logo.jsx
+src/pages/account/Account.jsx
+src/pages/stocks/AddDamageNote.jsx
+src/pages/stocks/ItemCategoryManager.jsx

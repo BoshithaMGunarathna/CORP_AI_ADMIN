@@ -1,0 +1,40 @@
+# Unused JSX Files Analysis Report
+# Generated on: 2025-08-06T09:49:14.123Z
+# Total JSX files analyzed: 78
+# Unused JSX files found: 6
+
+## Summary
+After analyzing all JSX files in the repository and tracking import dependencies, the following files appear to be unused:
+
+## Unused JSX Files
+1. src/components/dashboardComponents/SupplierCredits.jsx
+2. src/components/layouts/Loader.jsx  
+3. src/components/layouts/Logo.jsx
+4. src/pages/account/Account.jsx
+5. src/pages/stocks/AddDamageNote.jsx
+6. src/pages/stocks/ItemCategoryManager.jsx
+
+## Analysis Method
+The analysis was performed by:
+1. Scanning all JSX files in the project (78 total)
+2. Parsing import statements to build a dependency graph
+3. Starting from entry points (main.jsx, router.jsx) and following imports
+4. Using case-insensitive matching to handle potential case mismatches
+5. Identifying files that are not imported anywhere
+
+## Import Issues Found
+During the analysis, a case sensitivity issue was discovered in the router:
+- File: src/routes/router.jsx line 21
+- Issue: Import path "../pages/reports/Stockcard" should be "../pages/reports/StockCard"
+- This causes build failures in case-sensitive environments
+
+## Verification
+- Build test confirmed the import path issue exists
+- Manual grep searches confirmed no usage of the listed unused files
+- All identified files have valid JSX content but are not referenced in the application
+
+## Recommendation
+The 6 unused JSX files can likely be safely removed from the codebase to reduce project size and maintenance overhead. However, consider:
+1. Checking if these files are intended for future features
+2. Verifying they're not used in any dynamic imports or non-standard ways
+3. Testing thoroughly after removal to ensure no runtime issues
